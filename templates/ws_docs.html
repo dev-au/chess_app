@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Documentation</title>
+</head>
+<body>
+    <h1>WebSocket Documentation</h1>
+    <ul>
+        {% for func_name, annotations in ws_docs.items() %}
+            <li>
+                <h2>{{ func_name }}</h2>
+                <ul>
+                    {% for param, param_type in annotations.items() %}
+                        <li>{{ param }}: {{ param_type }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
